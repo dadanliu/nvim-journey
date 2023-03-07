@@ -57,10 +57,10 @@ return packer.startup(function(use)
       },
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
       require("toggleterm").setup()
   end}
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

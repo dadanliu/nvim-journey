@@ -22,8 +22,8 @@ end)
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "y", [["+y]])
+vim.keymap.set("n", "Y", [["+Y]])
 
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
@@ -46,4 +46,13 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+local opts = { noremap = true, silent = true }
+
+vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<cr>",opts)
+vim.keymap.set("n", "<leader>nf", ":NvimTreeFindFile<cr>",opts)
+vim.keymap.set("n", "<leader>nr", ":NvimTreeToggle<cr>",opts)
+
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", opts)
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
 
